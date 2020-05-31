@@ -1,0 +1,22 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}
+PRODUCT PAGE
+{% endblock title %}
+
+{% block content %}
+
+<h1>{{product_data.name}}</h1>
+<div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><img class="img-fluid" src="{{product_data.image.url}}"></div>
+                <div class="col-md-6">
+                    <h1>{{product_data.name}}</h1>
+                    <p>{{product_data.description}}</p>
+                    <div class="btn-group" role="group"></div><button class="btn btn-primary" type="button">Button</button></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

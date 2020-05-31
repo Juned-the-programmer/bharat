@@ -1,0 +1,30 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title %}PRODUCT PAGE
+{% endblock title %}
+
+{% block content %}
+
+
+<section class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        {% for a in data %}
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden" href="/product_page/{{a.id}}">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{a.image.url}}">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{a.name}}</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">{{a.description}}</h2>
+            <p class="mt-1">{{a.price}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</section>
+
+{% endblock content %}
